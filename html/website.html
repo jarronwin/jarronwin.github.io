@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jarron Nguyen's Website</title>
+  <link rel="stylesheet" href="https://unpkg.com/7.css">
+  <link rel="stylesheet" href="../css/website.css">
+  <link rel="icon" type="image/svg" href="../fruitego-aero/Windows_7-Logo.wine.svg">
+</head>
+<body>
+  <div class="main-grid">
+    <!-- Menu Bar -->
+    <div class="window active col-start-1-end-4 grid-row-1">
+      <div class="title-bar">
+        <div class="title-bar-text">Jarron Nguyen's Cool Website</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <ul role="menubar" class="can-hover">
+          <li role="menuitem" tabindex="0" aria-haspopup="true">File
+            <ul role="menu">
+              <li role="menuitem"><a href="/">Go to Home Page</a></li>
+              <li role="menuitem"><a href="#">Edit Website</a></li>
+              <li role="menuitem"><a href="#">Save</a></li>
+              <li role="menuitem"><a href="#">Save As...</a></li>
+              <li role="menuitem"><a href="#">Exit</a></li>
+            </ul>
+          </li>
+          <li role="menuitem" tabindex="0" aria-haspopup="true">Subgenres
+            <ul role="menu">
+              <li role="menuitem"><a href="#">Frutiger Aero</a></li>
+              <li role="menuitem"><a href="#">Frutiger Eco</a></li>
+              <li role="menuitem"><a href="#">Dark Aero</a></li>
+            </ul>
+          </li>
+          <li role="menuitem" tabindex="0" aria-haspopup="true">About
+            <ul role="menu">
+              <li role="menuitem"><a href="#">skeuoss.net</a></li>
+            </ul>
+          </li>
+          <li role="menuitem" tabindex="0" aria-haspopup="true">Resources
+            <ul role="menu">
+              <li role="menuitem"><a href="#">Icons Pack</a></li>
+              <li role="menuitem"><a href="#">Wallpapers</a></li>
+            </ul>
+          </li>
+          <li role="menuitem" tabindex="0" aria-haspopup="true">Help
+            <ul role="menu">
+              <li role="menuitem"><a href="#">Contact</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Home -->
+    <div class="window active col-start-4-end-9 grid-row-1">
+      <div class="title-bar">
+        <div class="title-bar-text">Home</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body no-padding">
+        <img src="../fruitego-aero/welcome.png" alt="Welcome banner" class="window-img" />
+        <p style="text-align: center; padding: 10px;">Welcome to my site! Click the expand button to open up any subpages.</p>
+      </div>
+    </div>
+
+    <!-- Photography -->
+    <div class="window active col-start-1-end-6 grid-row-3">
+      <div class="title-bar">
+        <div class="title-bar-text">Photography/Videography</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <br><br><br><p>Coming soon: My photography gallery in 2000s glory.</p><br><br><br>
+      </div>
+    </div>
+
+    <!-- Career -->
+    <div class="window active col-start-1-end-6 grid-row-4">
+      <div class="title-bar">
+        <div class="title-bar-text">Career</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p>
+          I graduated with a B.S. in Computer Information Systems from Arizona State University (forks up!!), and I aspire to work in agile environments focused on software development.
+          <br><br>
+          I've always been passionate about technology and am a firm believer in continuous improvement. I carry this mindset not only into my work, but also in my personal life.
+          <br><br>
+          Perfection may be impossible, but striving for it is not.
+          <br><br>
+          Click on the buttons to view my resume:
+        </p>
+        <div style="margin-top: 10px;">
+          <button class="seven-button" onclick="toggleResume()">Expand</button>
+          <a href="../Jarron_Nguyen_Resume2025.pdf" target="_blank">
+            <button class="seven-button">Open in new tab</button>
+          </a>
+        </div>
+        <div id="resume-frame-container" style="display: none; margin-top: 10px;">
+          <iframe src="../Jarron_Nguyen_Resume2025.pdf" width="100%" height="500px" style="border: 1px solid #ccc;"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Media Windows (all take 50%) -->
+    <!-- About Me -->
+    <div class="window active col-start-6-end-9 grid-row-3">
+      <div class="title-bar">
+        <div class="title-bar-text">About Me</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p>I like Frutiger Aero, web design, and nostalgic vibes.</p>
+        <img src="../Website/IMG_5018.JPG" alt="Self-Portrait" class="window-img about-img">
+        <p>My socials:</p>
+        <div class="socials-grid">
+          <div class="icon" data-app="external">
+            <a href="https://www.linkedin.com/in/jarron-nguyen/" target="_blank">
+              <img src="../fruitego-aero/linkedin.png" alt="LinkedIn" width="48" />
+              <div>LinkedIn</div>
+            </a>
+          </div>
+          <div class="icon" data-app="external">
+            <a href="https://open.spotify.com/user/1288737756" target="_blank">
+              <img src="../fruitego-aero/Spotify 2008-2013.ico" alt="Spotify" width="48" />
+              <div>Spotify</div>
+            </a>
+          </div>
+          <div class="icon" data-app="external">
+            <a href="https://letterboxd.com/jarronwin/" target="_blank">
+              <img src="https://a.ltrbxd.com/logos/letterboxd-mac-icon.png" alt="Letterboxd" width="48" />
+              <div>Letterboxd</div>
+            </a>
+          </div>
+          <div class="icon" data-app="external">
+            <a href="https://www.instagram.com/jarronwin/?hl=en" target="_blank">
+              <img src="../fruitego-aero/BrandLogo.org-Instagram-Logo-2011.png" alt="Instagram" width="48" />
+              <div>Instagram</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="window active col-start-6-end-9 grid-row-3">
+      <div class="title-bar">
+        <div class="title-bar-text">Favorite Movies</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <ul>
+          <li>Y Tu Mamá También</li>
+          <li>The Before Trilogy</li>
+          <li>Climax</li>
+          <li>Princess Mononoke</li>
+          <li>Everything Everywhere All at Once</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="window active col-start-6-end-9 grid-row-3">
+      <div class="title-bar">
+        <div class="title-bar-text">Favorite Albums</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <ul>
+          <li>Blonde – Frank Ocean</li>
+          <li>KIDS SEE GHOSTS – Kids See Ghosts</li>
+          <li>For Emma, Forever Ago – Bon Iver</li>
+          <li>Melodrama – Lorde</li>
+          <li>The Money Store – Death Grips</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="window active col-start-6-end-9 grid-row-4">
+      <div class="title-bar">
+        <div class="title-bar-text">Favorite Tracks</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <ul>
+          <li>Self Control – Frank Ocean</li>
+          <li>Runaway – Kanye West</li>
+          <li>Biking – Frank Ocean ft. Jay-Z & Tyler</li>
+          <li>Motion Picture Soundtrack – Radiohead</li>
+          <li>Knock Knock – Mac Miller</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleResume() {
+      const container = document.getElementById("resume-frame-container");
+      container.style.display = container.style.display === "none" || container.style.display === "" ? "block" : "none";
+    }
+  </script>
+</body>
+</html>

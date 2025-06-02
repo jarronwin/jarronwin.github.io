@@ -1,0 +1,292 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: url('../arrow.cur'), default;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-image: url('../fruitego-aero/c6xyflvpym3c1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  position: relative;
+}
+
+.desktop {
+  height: calc(100% - 40px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.folder-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.icon-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.icon-group, .folder-group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-height: calc(100vh - 100px); /* Leaves room for taskbar */
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .icon-group, .folder-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-height: none;
+    max-width: 100%;
+    cursor: url('../link.cur'), default;
+  }
+
+  .icon {
+    margin: 10px;
+    cursor: url('../link.cur'), default;
+  }
+}
+
+.icon {
+  display: inline-block;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  margin: 12px;
+  width: 100px;
+  cursor: url('../link.cur'), default;
+  border-radius: 6px;
+  padding: 6px;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.icon img {
+  display: block;
+  margin: 0 auto 4px;
+  width: 48px;
+  height: 48px;
+  cursor: url('../link.cur'), default;
+}
+
+.icon a,
+.icon a:hover,
+.icon a:visited,
+.icon a:active {
+  color: inherit;
+  text-decoration: none;
+  cursor: url('../link.cur'), default;
+}
+
+.icon:hover {
+  background-color: rgba(135, 206, 250, 0.2);
+  box-shadow: 0 0 6px rgba(135, 206, 250, 0.4);
+  cursor: url('../link.cur'), default;
+}
+
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to bottom, #a7c2ee, #6788ae);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.taskbar-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.taskbar-icons {
+  display: flex;
+  gap: 6px;
+  margin-left: 16px;
+  align-items: center;
+}
+
+.taskbar-icons img {
+  height: 40px;
+  width: 48px;
+  cursor: url('../link.cur'), default;
+  border-radius: 4px;
+  padding: 4px;
+  transition: box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.taskbar-icons img:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 8px rgba(135, 206, 250, 0.6);
+}
+
+.start-button img {
+  height: 36px;
+  width: 48px;
+  cursor: url('../link.cur'), default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-button img:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 8px rgba(135, 206, 250, 0.6);
+}
+
+.taskbar-clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 11px;
+  line-height: 1.2;
+  padding: 4px 6px;
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.taskbar-clock .time {
+  font-weight: 500;
+}
+
+.taskbar-clock .date {
+  font-size: 10px;
+  opacity: 0.85;
+}
+
+.icon a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  background-color: white;
+  border: 2px solid #9eb9e5;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.window-body {
+  padding: 15px;
+  flex: 1;
+  background-color: white;
+  overflow: auto;
+  border-top: 1px solid #dee7f2;
+}
+
+.title-bar {
+  background: linear-gradient(to bottom, #e0e8f5, #d6dfe9);
+  border-bottom: 1px solid #a1b4cf;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 28px;
+  border-radius: 10px 10px 0 0;
+  box-shadow: inset 0 -1px 0 #c0cde0;
+  font-weight: bold;
+  color: #2a2a2a;
+}
+
+.title-bar-controls {
+  display: flex;
+  gap: 0; /* ❌ removes spacing between buttons */
+}
+
+.title-bar-controls button {
+  width: 16px;
+  height: 14px;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: url('../link.cur'), default;
+  padding: 0;
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+}
+
+.title-bar-controls button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.title-bar-controls .close-btn {
+  background-color: transparent;
+}
+
+.title-bar-controls .close-btn:hover {
+  background: linear-gradient(to bottom, #f36f6f, #c80000);
+  border: 1px solid #900;
+  box-shadow: 0 0 2px #c00;
+}
+
+.title-bar-controls button[aria-label="Minimize"]:hover,
+.title-bar-controls button[aria-label="Maximize"]:hover {
+  background: linear-gradient(to bottom, #e6e6e6, #bfbfbf);
+  border: 1px solid #888;
+}
+
+.window {
+  resize: both;
+  overflow: auto;
+  min-width: 300px;
+  min-height: 200px;
+  z-index: 1000;
+  position: fixed;
+}
+
+.seven-button {
+  cursor: url('../link.cur'), default;
+}
+
+
+

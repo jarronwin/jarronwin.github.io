@@ -1,0 +1,92 @@
+/* GENERAL STYLING */
+body {
+  margin: 0;
+  padding: 40px 20px;
+  background: #1a5fb4;
+  font-family: sans-serif;
+}
+
+/* WINDOW STYLING */
+.window {
+  background-color: white !important;
+  margin: 0 auto 40px auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* Prevent accidental horizontal bleed */
+  padding: 0;
+}
+
+.window.active {
+  background-color: white !important;
+}
+
+/* MENU BAR FIX */
+.no-padding {
+  padding: 0;
+}
+
+/* IMAGES */
+.window-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* WINDOW BODY FULL WHITE */
+.window-body {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* CONTENT CONTAINER IF NEEDED (for centering text/images) */
+.content-wrapper {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ABOUT ME IMAGE */
+.about-img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto 0 auto;
+  border-radius: 4px;
+}
+
+/* SOCIAL ICONS */
+.socials-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 10px;
+}
+
+.socials-grid .icon {
+  text-align: center;
+  font-size: 13px;
+  color: black;
+}
+
+.socials-grid .icon img {
+  width: 36px;
+  height: 36px;
+  display: block;
+  margin: 0 auto 4px auto;
+}
+
+/* TEXT STYLING */
+.window-body p {
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto 10px auto;
+  text-align: justify;
+}

@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  padding: 40px;
+  background: #1a5fb4;
+  font-family: sans-serif;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 12.5% per column */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Medium Screens (Tablets 768px – 1024px) */
+@media (max-width: 1024px) {
+  .main-grid {
+    grid-template-columns: repeat(4, 1fr); /* fewer columns */
+  }
+
+  .col-lg-06, .col-lg-03, .col-start-1-end-5, .col-start-1-end-9 {
+    grid-column: span 4 !important; /* full-width */
+  }
+
+  .col-lg-02, .col-start-5-end-7, .col-start-6-end-9 {
+    grid-column: span 2 !important;
+  }
+}
+
+/* Small Screens (Phones <768px) */
+@media (max-width: 767px) {
+  .main-grid {
+    grid-template-columns: repeat(2, 1fr); /* stack layout */
+  }
+
+  .col-lg-06, .col-lg-03, .col-lg-02, .col-start-1-end-5, .col-start-1-end-9,
+  .col-start-5-end-7, .col-start-6-end-9 {
+    grid-column: span 2 !important; /* full-width for phone */
+  }
+
+  .window-body p {
+    padding: 0 10px;
+    text-align: left;
+  }
+
+  .about-img {
+    max-width: 90%;
+  }
+}
+	/* For phones (portrait) unless another @media rule below is fired */
+  @media only screen and (max-width: 500px) {
+    .col-sm-00  {display: 		   none; }
+    .col-sm-12 	{width: 		   100%; }
+  }
+
+  /* For medium screens (e.g. landscape phones and portrait tablets) */
+  @media only screen and (min-width: 501px) {
+    .col-md-00  {display: 		   none; }
+    .col-md-01  {width: 		  8.33%; }
+    .col-md-02  {width: 		 16.66%; }
+    .col-md-03  {width: 		 25.00%; }
+    .col-md-04  {width: 		 33.33%; }
+    .col-md-05  {width: 		 41.66%; }
+    .col-md-06  {width: 		 50.00%; }
+    .col-md-07  {width: 		 58.33%; }
+    .col-md-08  {width: 		 66.66%; }
+    .col-md-09  {width: 		 75.00%; }
+    .col-md-10  {width: 		 83.33%; }
+    .col-md-11  {width: 		 91.66%; }
+    .col-md-12  {width: 		100.00%; }
+  }
+
+  /* For large screens or landscape tablets*/		
+  @media only screen and (min-width: 1024px) {
+
+  .col-lg-01 { grid-column: span 1; } /* 12.5% */ 
+  .col-lg-02 { grid-column: span 2; } /* 25% */
+  .col-lg-03 { grid-column: span 3; } /* 50% */
+  .col-lg-06 { grid-column: span 6; } /* 100% if needed */
+  /* Grid utility classes */
+  .col-start-1-end-2 { grid-column: 1 / 2; } /* 12.5% */
+  .col-start-1-end-3 { grid-column: 1 / 3; } /* 25% */
+  .col-start-1-end-4 { grid-column: 1 / 4;} 
+  .col-start-1-end-5 { grid-column: 1 / 5;} 
+  .col-start-1-end-6 { grid-column: 1 / 6; }
+  .col-start-1-end-7 { grid-column: 1 / 7; }
+  .col-start-1-end-8 { grid-column: 1 / 8; }
+  .col-start-1-end-9 { grid-column: 1 / 9; }
+  .col-start-1-end-10 { grid-column: 1 / 10; }
+  .col-start-1-end-11 { grid-column: 1 / 11; }
+  .col-start-1-end-12 { grid-column: 1 / 12; }
+
+  .col-start-4-end-9 { grid-column: 4 / 6; }
+
+  .col-start-5-end-7 { grid-column: 5 / 7; } /* Starts at col 5 (62.5%), spans 2 (25%) */
+  .col-start-6-end-9 { grid-column: 7 / 9; } /* Starts at col 6 (75%), spans 3 (37.5%) */
+
+  /* You can keep extending this with combinations as needed */
+
+  .grid-row-1 { grid-row: 1; }
+  .grid-row-2 { grid-row: 2; }
+  .grid-row-3 { grid-row: 3; }
+  .grid-row-4 { grid-row: 4; }
+  .grid-row-5 { grid-row: 5; }
+  .grid-row-6 { grid-row: 6; }
+
+  .row-start-1-end-2 {grid-row: 1/2;}
+  .row-start-1-end-3 {grid-row: 1/3;}
+  .row-start-2-end-3 {grid-row: 2/3;}
+  .row-start-2-end-2 {grid-row: 2/2;} 
+  .row-start-3-end-6 {grid-row: 3/6;}
+  .row-start-6-end-9 {grid-row: 6/9;}
+}
+
+.window {
+  background-color: white !important;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  max-height: fit-content;
+}
+
+.window-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.window-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background: white;
+}
+
+.about-img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto 0 auto;
+  border-radius: 4px;
+}
+
+.socials-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 10px;
+}
+
+.socials-grid .icon {
+  text-align: center;
+  font-size: 13px;
+  color: black;
+}
+
+.socials-grid .icon img {
+  width: 36px;
+  height: 36px;
+  display: block;
+  margin: 0 auto 4px auto;
+}
+
+.window-body p {
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: justify;
+}
