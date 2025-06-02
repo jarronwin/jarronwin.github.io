@@ -14,7 +14,7 @@ html, body {
 }
 
 body {
-  background-image: url('../fruitego-aero/c6xyflvpym3c1.jpg');
+ background-color:#1a5fb4;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -75,6 +75,42 @@ body {
     margin: 10px;
     cursor: url('../link.cur'), default;
   }
+
+  .taskbar-clock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 9px; /* Smaller font size for mobile */
+    line-height: 1.2;
+    padding: 4px 6px;
+    text-align: center;
+  }
+
+  .taskbar-clock .time {
+    font-weight: 500;
+    font-size: 9px;
+  }
+
+  .taskbar-clock .date {
+    font-size: 7px;
+    opacity: 0.85;
+  }
+
+  .icon a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .taskbar-icons img {
+    height: 40px;
+    width: 40px;
+    cursor: url('../link.cur'), default;
+    border-radius: 4px;
+    padding: 4px;
+    transition: box-shadow 0.2s ease, background-color 0.2s ease;
+  }
 }
 
 .icon {
@@ -122,8 +158,8 @@ body {
   height: 40px;
   background: linear-gradient(to bottom, #a7c2ee, #6788ae);
   display: flex;
+  justify-content: space-between; /* space between icons and clock */
   align-items: center;
-  justify-content: space-between;
   padding: 0 12px;
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -133,19 +169,17 @@ body {
 .taskbar-left {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 24px;
 }
 
 .taskbar-icons {
   display: flex;
-  gap: 6px;
-  margin-left: 16px;
   align-items: center;
 }
 
 .taskbar-icons img {
   height: 40px;
-  width: 48px;
+  width: 40px;
   cursor: url('../link.cur'), default;
   border-radius: 4px;
   padding: 4px;
@@ -153,20 +187,6 @@ body {
 }
 
 .taskbar-icons img:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 8px rgba(135, 206, 250, 0.6);
-}
-
-.start-button img {
-  height: 36px;
-  width: 48px;
-  cursor: url('../link.cur'), default;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.start-button img:hover {
   background-color: rgba(255, 255, 255, 0.15);
   box-shadow: 0 0 8px rgba(135, 206, 250, 0.6);
 }
@@ -179,9 +199,8 @@ body {
   color: white;
   font-size: 11px;
   line-height: 1.2;
-  padding: 4px 6px;
+  padding: 4px 8px;
   text-align: center;
-  font-family: "Segoe UI", sans-serif;
 }
 
 .taskbar-clock .time {

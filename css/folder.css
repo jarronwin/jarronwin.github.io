@@ -1,0 +1,109 @@
+* {
+  cursor: url('../arrow.cur'), default;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #1a5fb4;
+  font-family: sans-serif;
+}
+
+.main-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.window {
+  background-color: white !important;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  max-height: fit-content;
+}
+
+.window-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.window-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background: white;
+}
+
+.window-body p {
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.seven-button {
+  cursor: url('../link.cur'), default;
+}
+
+.icon-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  flex-wrap: wrap; /* Optional: allows wrapping on smaller screens */
+}
+
+.icon.folder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 80px;
+}
+
+/* LARGE SCREENS */
+@media (min-width: 1200px) {
+  .main-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 40px;
+  }
+}
+
+/* MEDIUM SCREENS */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .main-flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+/* SMALL SCREENS */
+@media (max-width: 767px) {
+  .main-flex {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .window {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: auto;
+    border-radius: 0;
+  }
+
+  .window-body {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+}

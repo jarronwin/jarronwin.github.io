@@ -10,7 +10,7 @@
 </head>
 <body>
   <div class="desktop">
-    <!-- All icons (left side) -->
+        <!-- All icons (left side) -->
     <div class="icon-group">
       <div class="icon file" data-app="AboutMe.txt">
         <img src="./fruitego-aero/aboutme.png" alt="About Me" width="48" />
@@ -24,42 +24,22 @@
         </a>
       </div>
 
+      <div class="icon email" data-folder="Email">
+        <img src="./fruitego-aero/pngegg.png" alt="Email" width="48">
+        <div>Email Me</div>
+      </div>
+
       <div class="icon" data-app="site" data-link="./html/website-copy.html">
         <img src="./fruitego-aero/Internet_Explorer_logo_2007.svg" alt="Internet Explorer" width="48" />
         <div>Internet Explorer</div>
       </div>
-
-      <div class="icon" data-app="external">
-        <a href="https://www.linkedin.com/in/jarron-nguyen/" target="_blank">
-          <img src="./fruitego-aero/linkedin.png" alt="LinkedIn" width="48" />
-          <div>LinkedIn</div>
-        </a>
-      </div>
-
-      <div class="icon" data-app="external">
-        <a href="https://open.spotify.com/user/1288737756" target="_blank">
-          <img src="./fruitego-aero/Spotify 2008-2013.ico" alt="Spotify" width="48" />
-          <div>Spotify</div>
-        </a>
-      </div>
-
-      <div class="icon" data-app="external">
-        <a href="https://letterboxd.com/jarronwin/" target="_blank">
-          <img src="https://a.ltrbxd.com/logos/letterboxd-mac-icon.png" alt="Letterboxd" width="48" />
-          <div>Letterboxd</div>
-        </a>
-      </div>
-
-      <div class="icon" data-app="external">
-        <a href="https://www.instagram.com/jarronwin/?hl=en" target="_blank">
-          <img src="./fruitego-aero/BrandLogo.org-Instagram-Logo-2011.png" alt="Instagram" width="48" />
-          <div>Instagram</div>
-        </a>
-      </div>
-    </div>
-
     <!-- Folder group (right side) -->
-    <div class="folder-group">
+    <div class="icon-group">
+      <div class="icon folder" data-folder="File Explorer">
+        <img src="./fruitego-aero/fileexplorer.png" alt="Photos" width="48" />
+        <div>File Explorer</div>
+      </div>
+
       <div class="icon folder" data-folder="Photos">
         <img src="./fruitego-aero/Original Win7 Icons/3.ico" alt="Photos" width="48" />
         <div>Photos</div>
@@ -75,43 +55,45 @@
         <div>Personal</div>
       </div>
 
-      <div class="icon folder" data-folder="Personal">
-        <img src="./fruitego-aero/windowsmediaplayer_84133.ico" alt="Windows Media Player" width="48">
-        <div>My Videos</div>
+  <div class="taskbar">
+    <!-- Left side: icons group -->
+    <div class="taskbar-left">
+
+      <div class="taskbar-icons">
+          <img src="./fruitego-aero/windows7logotaskbar.png" alt="Instagram" width="28" height="28" />
       </div>
 
-      <div class="icon email" data-folder="Email">
-        <img src="./fruitego-aero/pngegg.png" alt="Email" width="48">
-        <div>Email Me</div>
+      <div class="taskbar-icons" data-app="external">
+        <a href="https://www.instagram.com/jarronwin/?hl=en" target="_blank">
+          <img src="./fruitego-aero/BrandLogo.org-Instagram-Logo-2011.png" alt="Instagram" width="28" height="28" />
+        </a>
       </div>
+
+      <div class="taskbar-icons" data-app="external">
+        <a href="https://www.linkedin.com/in/jarron-nguyen/" target="_blank">
+          <img src="./fruitego-aero/linkedin.png" alt="LinkedIn" width="28" />
+        </a>
+      </div>
+  
+      <div class="taskbar-icons" data-app="external">
+        <a href="https://open.spotify.com/user/1288737756" target="_blank">
+          <img src="./fruitego-aero/Spotify 2008-2013.ico" alt="Spotify" width="28" />
+        </a>
+      </div>
+  
+      <div class="taskbar-icons" data-app="external">
+        <a href="https://letterboxd.com/jarronwin/" target="_blank">
+          <img src="https://a.ltrbxd.com/logos/letterboxd-mac-icon.png" alt="Letterboxd" width="28" />
+        </a>
+      </div>
+    </div>
+  
+    <!-- Right side: clock -->
+    <div class="taskbar-clock">
+      <div class="time">12:00</div>
+      <div class="date">6/1/2025</div>
     </div>
   </div>
-
-    <div class="taskbar">
-      <!-- Group start button + icons in one container -->
-      <div class="taskbar-left">
-        <div class="start-button">
-          <img src="./fruitego-aero/microsofticon2.png" alt="Windows 7 Logo" width="36" />
-      </div>
-
-        <div class="taskbar-icons">
-          <img src="./fruitego-aero/Original Win7 Icons/1023.ico" alt="File Explorer">
-        </div>
-
-        <div class="taskbar-icons" data-app="site" data-link="../html/website-copy.html">
-          <img src="./fruitego-aero/Internet_Explorer_logo_2007.svg" alt="Internet Explorer" width="28" />
-        </div>
-
-        <div class="taskbar-icons" data-app="email">
-          <img src="./fruitego-aero/pngegg.png" alt="Gmail" width="28" />
-        </div>
-      </div>
-
-      <div class="taskbar-clock">
-        <div class="time">4:20 PM</div>
-        <div class="date">4/03/2025</div>
-      </div>
-    </div>
   </div>
   <script src="./js/desktop-popup.js"></script>
   <script src="./js/desktop.js"></script>
