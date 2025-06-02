@@ -9,11 +9,11 @@ window.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>
       <div class="window-body has-scrollbar" style="max-height: 300px; overflow: auto;">
-        <p><strong>Welcome to my Website!</strong></p>
+        <p><strong>Welcome to my Website! For the best experience, please use a desktop</strong></p>
         <ul style="margin-left: 20px;">
           <li>💻 Click on <strong>Internet Explorer</strong> to open the full website.</li>
           <li>📂 Open folders like <strong>Photos</strong> or <strong>Career</strong> for more info.</li>
-          <li>📄 Click on <strong>About_Me.txt</strong> or <strong>Resume.doc</strong> to open popups.</li>
+          <li>📄 Click on <strong>About_Me.txt</strong> or <strong>Resume.pdf</strong> to open popups.</li>
         </ul>
         <p style="margin-top: 10px;">Feel free to explore. Have fun!</p>
         <div style="text-align: right; margin-top: 15px;">
